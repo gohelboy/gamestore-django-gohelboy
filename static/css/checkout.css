@@ -1,0 +1,68 @@
+.checkout-container {
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-container h1 {
+    margin: 34px 0px;
+}
+
+.checkout-container .box {
+    width: 60%;
+    background-color: rgb(32, 32, 32);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 0px 0px;
+    margin-bottom: 7%;
+    padding: 24px;
+}
+
+.checkout-container .box form {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.checkout-container .box input {
+    width: 45%;
+    padding: 8px;
+    margin: 8px 0px;
+    background: none;
+    border: none;
+    outline: none;
+    color: antiquewhite;
+    border-bottom: 1px solid rgb(97, 97, 97);
+}
+
+.checkout-container .box form select {
+    color: white;
+    width: 45%;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.checkout-container .box form select option {
+    background: black;
+    font-size: 1rem;
+}
+
+
+.checkout-container .box form .btn {
+    color: white;
+    background-color: rgb(255, 136, 0);
+    width: 20%;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.checkout-container .box form .btn:hover {
+    background-color: orangered;
+}

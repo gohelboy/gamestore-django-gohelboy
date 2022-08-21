@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.4s;
+}
+
+body {
+    background: rgb(18, 18, 18);
+}
+
+.game-detail-view-container {
+    color: white;
+    padding: 0px 30px;
+    padding-bottom: 48px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.images-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120%;
+}
+
+.game-info-container {
+    padding: 34px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-box img {
+    border-radius: 18px;
+    width: 100%;
+}
+
+.mini-images {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mini-images img {
+    border: 2px solid rgb(31, 32, 36);
+    padding: 8px;
+    margin: 20px 10px;
+    width: 150px;
+    opacity: .5;
+    transition: 0.3s;
+}
+
+.mini-images img:hover {
+    opacity: 1;
+}
+
+
+
+.game-info-container .game-title h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.game-info-container .game-price h3 {
+    font-weight: 500;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.game-info-container p {
+    font-weight: 300;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.game-info-container form {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.quantity-count {
+    text-align: center;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 150px;
+    background-color: rgb(26, 26, 26);
+}
+
+.addtocart {
+    width: 100%;
+    background-color: rgb(97, 224, 0);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 14px 40px;
+    transition: 0.4s;
+    font-weight: 700;
+}
+
+.addtocart:hover {
+    background-color: rgb(67, 154, 0);
+}
+
+.buynow:hover {
+    background-color: rgb(0, 19, 159);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% extends 'base.html'%}
+    <link rel="stylesheet" href="/static/css/game-detail-view.css" type="text/css" />
+    <title>Document</title>
+</head>
+
+<body>
+    {% block content %}
+
+    <div class="game-detail-view-container">
+        <div class="images-container">
+            <div class="video-box">
+                <img src="{{game.mini_1.url}}" id="main-img" onclick="change(this)" />
+            </div>
+            <div class="mini-images">
+                <img src="{{game.mini_1.url}}" onclick="change(this)" />
+                <img src="{{game.mini_2.url}}" onclick="change(this)" />
+                <img src="{{game.mini_3.url}}" onclick="change(this)" />
+                <img src="{{game.mini_4.url}}" onclick="change(this)" />
+            </div>
+
+        </div>
+        <div class="game-info-container">
+            <div class="mini-container">
+                <div class="game-title">
+                    <h1>{{game.name}}</h1>
+                </div>
+
+                <div class="game-desc">
+                    <p>{{game.description}}</p>
+                </div>
+
+                <div class="game-price">
+                    <h3>Rs.{{game.price}}</h3>
+                </div>
+                <div class="btns">
+                    <form action="/add-to-cart/" method="POST">
+                        {% csrf_token %}
+                        <input type="text" name="game-id" value="{{game.id}}" hidden />
+                        <input type="number" class="quantity-count" name="quantity" value="1" min="1" />
+                        <input type="submit" class="addtocart" value="Add to Cart" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function change(mini) {
+            var fullimg = document.getElementById("main-img");
+            fullimg.src = mini.src;
+        }       
+    </script>
+
+    {% endblock %}
+</body>
+
+</html>

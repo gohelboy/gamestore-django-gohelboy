@@ -1,0 +1,77 @@
+.form-container {
+    padding: 64px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container .form-box {
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    transition: 0.4s;
+
+}
+
+.form-container .form-box:hover .img img {
+    filter: grayscale(0%);
+}
+
+.form-container .form-box .form {
+    width: 50%;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.form-container .form-box .form .if {
+    width: 100%;
+    background: none;
+    padding: 14px;
+    border-radius: 50px;
+    outline: none;
+    border: 2px solid #ce389c;
+    color: #ce389c;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.form-container .form-box .form .if-btn {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    background-color: #ce389c;
+    padding: 14px 0px
+}
+
+.form-container .form-box .form .if-btn:hover {
+    background-color: purple
+}
+
+.form-container .form-box .form .gotolink {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    font-size: 14px;
+}
+
+.form-container .form-box .form .gotolink a {
+    color: #0aa5dc;
+    border-bottom: 1px #0aa5dc solid;
+}
+
+.form-container .form-box .img {
+    overflow: hidden;
+    width: 50%
+}
+
+.form-container .form-box .img img {
+    filter: grayscale(100%);
+    width: 400px;
+}

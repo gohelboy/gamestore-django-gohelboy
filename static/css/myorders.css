@@ -1,0 +1,28 @@
+.myorders-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.myorders-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+    margin: 48px 0px;
+    text-align: center;
+    background-color: rgb(100, 100, 100);
+    width: 70%;
+    padding: 40px 0px;
+}
+
+.myorders-box table {
+    width: 100%;
+}
+
+.myorders-box .orders img {
+    border-radius: 14px;
+    margin: 20px 0px;
+}

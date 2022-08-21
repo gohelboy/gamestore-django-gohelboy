@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/game-detail-view.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/cart.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/about-us.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/contact-us.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/checkout.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/myorders.css"/>
+    
+    <title>Gamestore</title>
+</head>
+
+
+<body>
+
+    <div class="navbar-container">
+        <div class="navbar">
+            <div class="logo">
+                <a href={% url 'home' %}>
+                    <h1>Gamestore</h1>
+                </a>
+            </div>
+            <div class="nav-link">
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <h4>Hello, {{user.username}}</h4>
+                    </li>
+                    <li>
+                        <a href="{% url 'cart' %}">Cart</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'my-order' %}">My orders</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </li>
+                    {%else%}
+
+                    <li>
+                        <a href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'register' %}">Register</a>
+                    </li>
+                    {%endif%}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% block content%}
+    {% endblock content %}
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-link">
+                <a href="{% url 'about-us' %}">About us</a>
+                <a href="{% url 'contact-us' %}">Contact us</a>
+            </div>
+            <p>
+                © 2022, Gamestore, Inc. All rights reserved. Gohel, the Gamestore Games logo, Fortnite, the Fortnite
+                logo,
+                Unreal, Unreal Engine, the Unreal Engine logo, Unreal Tournament, and the Unreal Tournament logo are
+                trademarks or
+                registered trademarks of Gamestore Games, Inc. in the United States of America and elsewhere. Other
+                brands
+                or
+                product names
+                are the trademarks of their respective owners. Non-US transactions through Gamestore Games International
+            </p>
+
+        </div>
+    </div>
+</body>
+
+</html>

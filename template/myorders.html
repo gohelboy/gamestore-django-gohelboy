@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% extends 'base.html' %}
+    <link rel="stylesheet" type="text/css" href="/static/css/myorders.css" />
+    <title>My orders</title>
+</head>
+
+<body>
+    {% block content %}
+    <div class="myorders-container">
+        <div class="myorders-box">
+            <table>
+                <tr>
+                    <th>ORDER NO</th>
+                    <th>IMAGE</td>
+                    <th>NAME</th>
+                    <th>ORDER</th>
+                    <th>DATE</th>
+                    <th>STATUS</th>
+                    <th>TOTAL</th>
+                </tr>
+
+                {% for i in items %}
+                <tr class="orders">
+                    <td>#{{i.pk}}</td>
+                    <td><img src="{{i.cart.product.image.url}}" width="100px"></td>
+                    <td>{{i.cart.product.name}}</td>
+                    <td>{{i.cart.quantity}}</td>
+                    <td>{{i.time}}</td>
+                    <td>{{i.get_status_display}}</td>
+                    <td>Rs.{{i.total}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

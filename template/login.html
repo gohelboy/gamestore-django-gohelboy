@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/forms.css" />
+    {% extends 'base.html' %}
+    <title>Document</title>
+</head>
+
+<body>
+    {% block content %}
+    <div class="form-container">
+        <div class="form-box">
+            <div class="form">
+                <h1>Login</h1><br>
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="text" class="if" name="username" placeholder="username" required /><br><br>
+                    <input type="password" class="if" name="password" placeholder="password" required /><br><br>
+                    <button class="if-btn" type="submit">Login</button>
+                </form><br>
+                <div class="gotolink">
+                    Create an account <a href="{% url 'register' %}"> click here</a>
+                </div>
+                </form>
+            </div>
+            <div class="img">
+                <img src="/static/images/loginbg.jpg" />
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+
+</html>
